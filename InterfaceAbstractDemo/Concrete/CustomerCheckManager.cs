@@ -10,5 +10,9 @@ namespace InterfaceAndAbstractDemo.Concrete
             return true;
         }
 
+        public bool CheckIt(Customer customer)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

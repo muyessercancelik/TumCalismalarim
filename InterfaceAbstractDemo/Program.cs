@@ -14,9 +14,14 @@ namespace InterfaceAbstractDemo
     {
         static void Main(string[] args)
         {
-            BaseCustomerManager customerManager = new StarbucksCustomerManager(new MernisServiceAdapter());
+            BaseCustomerManager customerManager = new NeroCustomerManager(new MernisServiceAdapter());
             customerManager.Save(new Customer{DateOfBirth= new DateTime(1991,11,5), FirstName="Müyesser", LastName="Cançelik",
-                                             Id=1234, NationalityId=""});
+                                              NationalityId="46816966444"});
+
+
+            //BaseCustomerManager customerManager = new NeroCustomerManager(new MernisServiceAdapter());
+            //customerManager.Save(new Customer { DateOfBirth = new DateTime(1985, 1, 6), FirstName = "Engin", LastName = "Demiroğ", NationalityId = "" });
+            //Console.ReadLine();
 
         }
     }
