@@ -1,13 +1,8 @@
-﻿using InterfaceAbstractDemo.Abstract.ICustomerCheckService;
+﻿using System;
 using InterfaceAbstractDemo.Entities;
-using MernisServiceReference;
 using InterfaceAbstractDemo.Adapters;
-using InterfaceAbstractDemo.Concrete;
-using System.Threading.Tasks;
-using System.Text;
-using System.Linq;
-using System;
-using System.Collections.Generic;
+using InterfaceAndAbstractDemo.Abstract;
+using InterfaceAndAbstractDemo.MernisServiceReference;
 
 namespace InterfaceAbstractDemo.Adapters
 {
@@ -16,7 +11,7 @@ namespace InterfaceAbstractDemo.Adapters
         public bool CheckIfRealPerson(Customer customer)
         {
             KPSPublicSoapClient client = new KPSPublicSoapClient();
-            return client.TCKimlikNoDogrula(customer.NationalityId, customer.FirstName.ToUpper,
+            return client.TCKimlikNoDogrula(Convert.ToInt64(customer.NationalityId), customer.FirstName.ToUpper,
                                             customer.LastName.ToUpper, customer.DateOfBirth.Year);
 
 

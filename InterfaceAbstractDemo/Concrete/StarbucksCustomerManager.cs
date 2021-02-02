@@ -1,15 +1,11 @@
-﻿using InterfaceAbstractDemo.Abstract;
-using InterfaceAbstractDemo.Entities;
+﻿
 using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using InterfaceAbstractDemo.Abstract.ICustomerCheckService;
+using InterfaceAndAbstractDemo.Abstract;
+using InterfaceAbstractDemo.Entities;
 
-namespace InterfaceAbstractDemo.Concrete
+namespace InterfaceAndAbstractDemo.Concrete
 {
-    public class StarbucksCustomerManager:BaseCustomerManager
+    public class StarbucksCustomerManager : BaseCustomerManager
     {
         private ICustomerCheckService _customerCheckService;
 
@@ -26,12 +22,9 @@ namespace InterfaceAbstractDemo.Concrete
             }
             else
             {
-                throw new Exception("Geçerli bir kullanıcı bulunamadı!");
+                throw new Exception("Kişi bulunmamaktadır.");
             }
-            
+
         }
-
-        
     }
-
 }

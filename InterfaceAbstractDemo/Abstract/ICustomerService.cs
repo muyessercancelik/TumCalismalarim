@@ -1,9 +1,10 @@
 ﻿using InterfaceAbstractDemo.Entities;
 
+
 namespace InterfaceAndAbstractDemo.Abstract
 {
-    public interface ICustomerCheckService
+    public interface ICustomerService
     {
-        bool CheckIfRealPerson(Customer customer);
+        void Save(Customer customer);
     }
 }
