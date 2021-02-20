@@ -51,7 +51,7 @@ namespace LinqProjectOrnek
             //GetProducts(products);
         }
 
-        static List<Product> GetProductsLinq(List<Product> products)
+        static List<Product> GetProductsLinq(List<Product> products)//Metot
         {
             return products.Where(p => p.UnitPrice > 5000 && p.UnitsInStock > 3).ToList();
         }
